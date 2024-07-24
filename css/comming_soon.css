@@ -82,7 +82,7 @@ section {
 }
 
 footer {
-    background-color: #fa0202;
+    background-color: #ffffff;
     text-align: center;
     padding: 1px 0;
     display: flex;
@@ -98,7 +98,7 @@ footer {
     margin: auto;
     padding: auto;
     align-items: center;
-    opacity: 25%;
+    opacity: 50%;
     justify-content: flex-start;
     width: 33%;
     text-align: left;
@@ -123,9 +123,9 @@ footer {
 }
 
 #social-media img {
-    padding: 0px 5px;
-    height: 40px;
-    width: 40px;
+    padding: 0px 15px;
+    height: 50px;
+    width: 50px;
 }
 
 /* Responsive styles */
