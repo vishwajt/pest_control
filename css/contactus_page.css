@@ -64,13 +64,81 @@ header {
 }
 
 main {
-    background-color: aqua;
+    /* background-color: aqua; */
     font-family: 'Nunito';
-    height: 80%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
-section {
-    padding: 0px;
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    text-align: center;
+}
+
+#form-bg {
+    width: 80vw;
+    background-image: url("../data/form-bg1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 22vw;
+    height: auto;
+    box-shadow: 
+        40px 0px 50px -10px rgba(234, 234, 234, 0.5),
+        -10px 0 30px -10px rgba(234, 234, 234, 0.5), /* Left shadow */
+        0 30px 30px -10px rgba(234, 234, 234, 0.5);  /* Bottom shadow */
+}
+
+.form-container h2 {
+    margin-top: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-container input{
+    width: 20vw;
+    padding: 10px;
+    margin-top: 40px;
+    border: 1px solid #ccc;
+    border-radius: 17px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"] {
+    height: 50px;
+    background-color: #EEEEEE;
+    padding-left: 0px 50px;
+}
+
+.form-container button {
+    width: 30%;
+    height: 20%;
+    padding: 10px;
+    background-color: #85C300;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.form-container button:hover {
+    background-color: #2980b9;
 }
 
 footer {
