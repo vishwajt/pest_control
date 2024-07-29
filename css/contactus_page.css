@@ -81,37 +81,39 @@ main {
 }
 
 #form-bg {
-    width: 80vw;
-    background-image: url("../data/form-bg1.png");
+    background-image: url("../data/form-bg3.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
 }
 
 .form-container {
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: #ffffff;
+    border: 6px solid #266ac1;
+    border-radius: 15px;
     width: 22vw;
     height: auto;
+    border: #000 5px;
     box-shadow: 
-        40px 0px 50px -10px rgba(234, 234, 234, 0.5),
-        -10px 0 30px -10px rgba(234, 234, 234, 0.5), /* Left shadow */
-        0 30px 30px -10px rgba(234, 234, 234, 0.5);  /* Bottom shadow */
+        15px 0px 20px -15px rgba(0, 0, 0, 0.2),
+        -15px 0px 20px -15px rgba(0, 0, 0, 0.2),
+        0px 10px 20px 10px rgba(0, 0, 0, 0.2);
 }
 
 .form-container h2 {
-    margin-top: 0;
-    text-align: center;
     margin-top: 20px;
+    text-align: center;
+    font-size: 27px;
 }
 
 .form-container input{
     width: 20vw;
-    padding: 10px;
+    padding-left: 25px;
     margin-top: 40px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 17px;
     box-sizing: border-box;
+    font-size: 15px;
 }
 
 .form-container input[type="text"],
@@ -120,6 +122,13 @@ main {
     height: 50px;
     background-color: #EEEEEE;
     padding-left: 0px 50px;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="tel"]:focus {
+    border-color: #F7C33B;
+    outline: none;
 }
 
 .form-container button {
