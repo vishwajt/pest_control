@@ -4,7 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home | RS Pest Control</title>
+        <title>Contact Us | RS Pest Control</title>
+        <link rel="icon" href="../data/rs_pest_control_logo.png" type="image/x-icon">
         <!-- The below css is for the burger menu -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- The below css is for Playfair Display SC font -->
@@ -18,13 +19,13 @@
         <header>
             <nav id="navbar">
                 <div class="logo">
-                    <a href="#"><img src="../data/rs_pest_control_logo.png" alt="RS Pest Control Logo"></a>
+                    <a href="../../index.html"><img src="../data/rs_pest_control_logo.png" alt="RS Pest Control Logo"></a>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="homepage.html">Home</a></li>
-                        <li><a href="comming_soon.html">Services</a></li>
-                        <li><a href="contactus_page.html">Contact Us</a></li>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="./comming_soon.html">Services</a></li>
+                        <li><a href="./contactus_page.html">Contact Us</a></li>
                     </ul>
                     <div id="menu-toggle" onclick="toggleMenu()"><i class="fa fa-bars"></i></div>
                 </div>
@@ -32,13 +33,15 @@
         </header>
         <main>
             <section class="form-section" id="form-bg">
-                <form class="form-container" id="contact-form">
+                <form class="form-container" id="contact-form" action="../php/email_service.php" method="post">
                     <h2>Contact Our Team</h2>
                     <input type="text" id="name" name="name" placeholder="Full Name" required>
                     
-                    <input type="email" id="email" name="email" placeholder="Address" required>
+                    <input type="email" id="email" name="email" placeholder="Email Id" required>
                     
-                    <input type="tel" id="phone" name="phone" placeholder="Phone" required></input>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+
+                    <!-- Type of pest from the user not comp-->
                     
                     <button type="submit">Submit</button>
                 </form>
@@ -49,13 +52,13 @@
                 <p>Head Office : B/1/H/1/4, Beliaghata, Kolkaa, 700010</p>
             </div>
             <div id="rights">
-                <p>&copy; 2024 All Rights Reserved | RS Pest Control</p>
+                <p>&copy; 2024 All Rights Reserved | RS Pest Control Expert</p>
             </div>
             <div id="social-media">
-                <a href="#"><img src="../data/facebook.png" alt="RS Pest Control Facebook"></a>
-                <a href="#"><img src="../data/instagram.png" alt="RS Pest Control Instagram"></a>
+                <a href="https://www.facebook.com/share/26q5DryxWt17aTrQ/?mibextid=qi2Omg" target="_blank"><img src="../data/facebook.png" alt="RS Pest Control Facebook"></a>
+                <a href="https://www.instagram.com/explore/locations/104164419228427/susil-patra-instagram-2-youtube-channel-2/" target="_blank"><img src="../data/instagram.png" alt="RS Pest Control Instagram"></a>
             </div>
         </footer>
-        <script src="../javascripts/contactus_page.js"></script>
+        <!-- <script src="../javascripts/contactus_page.js"></script> -->
     </body>
 </html>
