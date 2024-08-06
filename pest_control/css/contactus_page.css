@@ -63,7 +63,6 @@ header {
 }
 
 main {
-    /* background-color: aqua; */
     font-family: 'Nunito', sans-serif;
     padding: 0;
     margin: 0;
@@ -90,7 +89,7 @@ main {
     background-color: #ffffff;
     border: 6px solid #266ac1;
     border-radius: 15px;
-    width: 23vw;
+    width: 25vw;
     height: auto;
     border: #000 5px;
     box-shadow: 
@@ -131,6 +130,34 @@ input[type="email"]:focus,
 input[type="tel"]:focus {
     border-color: #F7C33B;
     outline: none;
+}
+
+.form-container select {
+    width: 20vw;
+    height: 50px;
+    padding-left: 25px;
+    margin-top: 35px;
+    border: 1px solid #ffffff;
+    border-radius: 17px;
+    box-sizing: border-box;
+    font-size: 15px;
+    background-color: #EEEEEE;
+    font-family: 'Nunito', sans-serif;
+    background-image: url('../data/dropdown-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+}
+
+.form-container select:focus {
+    border-color: #F7C33B;
+    outline: none;
+}
+
+.form-container select option {
+    background-color: #ffffff;
+    color: #00000099;
+    font-size: 16px;
 }
 
 .form-container button {
