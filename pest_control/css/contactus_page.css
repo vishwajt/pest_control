@@ -101,7 +101,8 @@ main {
 .form-container h2 {
     margin-top: 30px;
     text-align: center;
-    font-size: 27px;
+    font-size: 25px;
+    color: #6e6e6e;
 }
 
 .form-container input {
@@ -227,24 +228,92 @@ footer {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    header {
+        padding: 10px 15px;
+        height: 7vh;
+        flex-direction: column;
+    }
+
+    .logo img {
+        height: 7vh;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: space-between;
+    }
+
     .menu ul {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #333;
+        background-color: #ffffff;
+        padding: 10px 0;
     }
 
     .menu ul li {
         margin: 10px 0;
+        padding: 10px 0;
         text-align: center;
     }
 
     #menu-toggle {
         display: block;
+        font-size: 30px;
+        padding-left: 90%;
+    }
+
+    .form-section {
+        height: auto;
+        padding: 20px;
+    }
+
+    .form-container {
+        width: 80%;
+        box-shadow: 
+            10px 0px 15px -10px rgba(0, 0, 0, 0.2),
+            -10px 0px 15px -10px rgba(0, 0, 0, 0.2),
+            0px 5px 15px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-container input,
+    .form-container select {
+        width: 90%;
+    }
+
+    .form-container button {
+        width: 50%;
+    }
+
+    footer {
+        flex-direction: column;
+        height: 7vh;
+        font-size: 13px;
+    }
+
+    #address {
+        color: #000;
+        opacity: 50%;
+        width: 100%;
+    }
+    
+    #rights {
+        width: 100%;
+        font-variant-caps: petite-caps;
+    }
+    
+    #social-media {
+        display: flex;
+        height: 100%;
+    }
+    
+    #social-media img {
+        height: 30px;
+        width: 30px;
     }
 }
 
 /* Show menu when toggled */
-.menu nav.active ul {
+.menu.active ul {
     display: flex;
 }

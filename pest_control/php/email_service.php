@@ -1,22 +1,11 @@
-<!-- The below api key is from the ZeroBounce service
-    The credentials used for the this account is:
-        vishwajitdalve@gmail.com and password ending with Z -->
-
 <?php
-function validateEmailWithAPI($email) {
-    $apiKey = '1461be74d66a40b2ad14dbf9ce5357cd';
-    $url = 'https://api.zerobounce.net/v2/validate?api_key=' . urlencode($apiKey) . '&email=' . urlencode($email);
 
-    $response = file_get_contents($url);
-
-    if ($response === FALSE) {
-        return false;
-    }
-
-    $result = json_decode($response, true);
-
-    return isset($result['status']) && $result['status'] === 'valid';
-}
+$commonDomains = [
+    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'aol.com', 'icloud.com',
+    'rediffmail.com', 'protonmail.com', 'zoho.com', 'yandex.com', 'mail.com',
+    'gmail.in', 'yahoo.in', 'outlook.in', 'hotmail.in', 'aol.in', 'icloud.in',
+    'rediffmail.in', 'protonmail.in', 'zoho.in', 'yandex.in', 'mail.in',
+];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
@@ -31,9 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Validate email with an external API
-    if (!validateEmailWithAPI($email)) {
-        echo "<script>alert('Invalid or spam Email ID Entered'); window.history.back();</script>";
+    // Extract domain from email
+    $domain = substr(strrchr($email, "@"), 1);
+
+    // Check if domain is in the list of common domains
+    if (!in_array($domain, $commonDomains)) {
+        echo "<script>alert('Email Id is Invalid'); window.history.back();</script>";
         exit;
     }
 
