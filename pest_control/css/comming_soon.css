@@ -15,9 +15,6 @@ header {
     font-family: 'Playfair Display SC';
     font-variant-caps: petite-caps;
     height: 10vh;
-    /* position: sticky;
-    top: 0;
-    z-index: 1000; */
 }
 
 #navbar {
@@ -27,7 +24,6 @@ header {
 }
 
 .logo {
-    width: 50%;
     align-items: center;
     height: 100%;
 }
@@ -64,6 +60,10 @@ header {
     display: none;
     font-size: 20px;
     cursor: pointer;
+}
+
+#close-menu {
+    display: none;
 }
 
 main {
@@ -124,26 +124,138 @@ footer {
     width: 50px;
 }
 
+/* Rotating animation for the close icon */
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+/* Reverse rotation for closing */
+@keyframes rotateIconReverse {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
-    .menu ul {
-        display: none;
+    header {
+        padding: 10px 15px;
+        height: 7vh;
         flex-direction: column;
-        width: 100%;
-        background-color: #333;
     }
 
-    .menu ul li {
-        margin: 10px 0;
-        text-align: center;
+    .logo img {
+        height: 7vh;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .menu ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 60%;
+        background-color: #ffffff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.8s ease;
+        z-index: 1000;
+        margin: 0px;
+    }
+
+    .menu ul.active {
+        right: 0;
     }
 
     #menu-toggle {
         display: block;
+        font-size: 30px;
+        cursor: pointer;
     }
-}
 
-/* Show menu when toggled */
-.menu nav.active ul {
-    display: flex;
+    .menu ul li {
+        margin: 20px 0;
+    }
+
+    .menu ul li a {
+        font-size: 24px;
+    }
+
+    .menu ul.active #close-menu i {
+        animation: rotateIcon 0.8s ease-in-out forwards;
+    }
+
+    .menu ul:not(.active) #close-menu i {
+        animation: rotateIconReverse 0.3s ease-in-out forwards;
+    }
+
+    .menu ul #close-menu {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 25px;
+        cursor: pointer;
+        display: block;
+    }
+
+    .menu ul #close-menu i {
+        color: #000;
+        height: 100%;
+    }
+    footer {
+        flex-direction: column;
+        height: auto;
+        font-size: 13px;
+    }
+
+    #address {
+        color: #000;
+        opacity: 50%;
+        width: 100%;
+        text-align: center;
+        width: auto;
+        height: auto;
+        padding-left: 4px;
+        margin: 0px;
+    }
+    
+    #rights {
+        width: 100%;
+        font-variant-caps: petite-caps;
+        text-align: center;
+        width: auto;
+        height: auto;
+        margin: 0px;
+    }
+    
+    #social-media {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        padding-bottom: 20px;
+        margin: 0px;
+    }
+    
+    #social-media img {
+        height: 35px;
+        width: 35px;
+        padding: 0px 15px 0px 0px;
+        z-index: 900;
+    }
 }
