@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- The below css is for Playfair Display SC font -->
         <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+        <!-- The below css is for Roboto font -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <!-- The below css is for Nunito font -->
         <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
         <!-- The below css is the local styling -->
@@ -27,7 +29,7 @@
                     <ul>
                         <li id="close-menu" onclick="toggleMenu()"><i class="fa fa-times"></i></li>
                         <li><a href="./index.html">Home</a></li>
-                        <li><a href="./pest_control/pages/comming_soon.html">Services</a></li>
+                        <li><a href="./pest_control/pages/service_page.html">Services</a></li>
                         <li><a href="./pest_control/pages/contactus_page.html">Contact Us</a></li>
                     </ul>
                     <div id="menu-toggle" onclick="toggleMenu()">
@@ -41,13 +43,102 @@
                 <img src="./pest_control/data/banner.png">
             </section>
             <section class="section" id="our_services">
-                
+                <div class="service-title">
+                    <h2>Our Services</h2>
+                </div>
+                <div class="service-container">
+                    <button class="serv-prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                    <div class="slider-container">
+                        <div class="serv-slider">
+                            <div class="serv-slide">
+                                <div class="card">
+                                    <img src="./pest_control/data/service/ants.png" alt="Image 1">
+                                    <h3>Ants</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magni maiores quidem ratione. Nihil illo minus esse maxime ipsa tempora ad magnam excepturi praesentium sequi cupiditate, ipsum ratione dolor facere.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="./pest_control/data/service/termite.png" alt="Image 2">
+                                    <h3>Termite</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magni maiores quidem ratione. Nihil illo minus esse maxime ipsa tempora ad magnam excepturi praesentium sequi cupiditate, ipsum ratione dolor facere.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="./pest_control/data/service/ticks.png" alt="Image 3">
+                                    <h3>Ticks</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magni maiores quidem ratione. Nihil illo minus esse maxime ipsa tempora ad magnam excepturi praesentium sequi cupiditate, ipsum ratione dolor facere.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="./pest_control/data/service/ants.png" alt="Image 4">
+                                    <h3>Ants</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magni maiores quidem ratione. Nihil illo minus esse maxime ipsa tempora ad magnam excepturi praesentium sequi cupiditate, ipsum ratione dolor facere.</p>
+                                </div>
+                                <div class="card">
+                                    <img src="./pest_control/data/service/termite.png" alt="Image 5">
+                                    <h3>Termite</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magni maiores quidem ratione. Nihil illo minus esse maxime ipsa tempora ad magnam excepturi praesentium sequi cupiditate, ipsum ratione dolor facere.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="serv-next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
             </section>
             <section class="section" id="why-us">
-                
+                <div class="why-title">
+                    <h2>Why Choose Us ?</h2>
+                </div>
+                <div class="main-why">
+                    <div class="why-left">
+                        <img src="./pest_control/data/gallery/1.jpeg" alt="Why Choose Us Image">
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="why-right">
+                        <div class="why-box">
+                            <div class="why-box-img">
+                                <img src="./pest_control/data/eco-friendly.png" alt="">
+                            </div>
+                            <div class="why-box-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magni maiores quidem ratione.</p>
+                            </div>
+                        </div>
+                        <div class="why-box" id="middle-box">
+                            <div class="why-box-img">
+                                <img src="./pest_control/data/non-toxic.png" alt="">
+                            </div>
+                            <div class="why-box-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magni maiores quidem ratione.</p>
+                            </div>
+                        </div>
+                        <div class="why-box">
+                            <div class="why-box-img">
+                                <img src="./pest_control/data/gurantee.png" alt="">
+                            </div>
+                            <div class="why-box-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex magni maiores quidem ratione.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="section" id="gallery">
-                
+                <div class="portfolio-title">
+                    <h2>Our Portfolio</h2>
+                </div>
+                <div class="slide slider">
+                    <div class="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+                    <div class="scroll">
+                        <ul>
+                            <li><video src="./pest_control/data/gallery/12.mp4" autoplay muted loop controls></video></li>
+                            <li><img src="./pest_control/data/gallery/3.jpeg" alt="Img 11" /></li>
+                            <li><img src="./pest_control/data/gallery/4.jpeg" alt="Img 12" /></li>
+                            <li><img src="./pest_control/data/gallery/5.jpeg" alt="Img 13" /></li>
+                            <li><img src="./pest_control/data/gallery/6.jpeg" alt="Img 14" /></li>
+                            <li><img src="./pest_control/data/gallery/7.jpeg" alt="Img 15" /></li>
+                            <li><img src="./pest_control/data/gallery/8.jpeg" alt="Img 16" /></li>
+                            <li><img src="./pest_control/data/gallery/9.jpeg" alt="Img 17" /></li>
+                            <li><video src="./pest_control/data/gallery/10.mp4" autoplay muted loop></video></li>
+                    </div>
+                    <div class="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+                </div>
             </section>
         </main>
         <footer>
@@ -66,6 +157,12 @@
 				</a>
             </div>
         </footer>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="./pest_control/javascripts/service.slider.js"></script>
+        <script type="text/javascript" src="./pest_control/javascripts/jquery.slider.js"></script>
+        <script>
+            $('.slide').Slider();
+        </script>
         <script src="./pest_control/javascripts/homepage.js"></script>
     </body>
 </html>
