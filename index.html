@@ -124,7 +124,7 @@
                     <h2>Our Portfolio</h2>
                 </div>
                 <div class="slide slider">
-                    <div class="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+                    <button class="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
                     <div class="scroll">
                         <ul>
                             <li><video src="./pest_control/data/gallery/12.mp4" autoplay muted loop controls></video></li>
@@ -137,7 +137,7 @@
                             <li><img src="./pest_control/data/gallery/9.jpeg" alt="Img 17" /></li>
                             <li><video src="./pest_control/data/gallery/10.mp4" autoplay muted loop></video></li>
                     </div>
-                    <div class="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+                    <button class="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
             </section>
         </main>
@@ -157,6 +157,12 @@
 				</a>
             </div>
         </footer>
+        <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+                <span id="popup-close" class="popup-close">&times;</span>
+                <div id="popup-card"></div>
+            </div>
+        </div>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script type="text/javascript" src="./pest_control/javascripts/service.slider.js"></script>
         <script type="text/javascript" src="./pest_control/javascripts/jquery.slider.js"></script>
@@ -164,5 +170,6 @@
             $('.slide').Slider();
         </script>
         <script src="./pest_control/javascripts/homepage.js"></script>
+        <script src="./pest_control/javascripts/service_popup.js"></script>
     </body>
 </html>

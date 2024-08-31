@@ -390,13 +390,14 @@ footer {
         width: auto;
         height: auto;
         padding-bottom: 20px;
+        padding-right: 0px;
         margin: 0px;
     }
     
     #social-media img {
         height: 35px;
         width: 35px;
-        padding: 0px 15px 0px 0px;
+        padding: 0px 10px;
         z-index: 900;
     }
 }

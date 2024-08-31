@@ -4,22 +4,38 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevButton = document.querySelector(".serv-prev");
     const nextButton = document.querySelector(".serv-next");
     const cardsToShow = 3; // Number of cards to display at a time
-
+    const cardsToShowSmall = 2;
     let currentIndex = 0;
+    const windowWidth = window.innerWidth;
 
     // Set the width of each card based on the number of cards to show
     servSlides.forEach((card) => {
-        card.style.flex = `0 0 30%`;
+        if(windowWidth > 768) {
+            card.style.flex = `0 0 29.5%`;
+        } else {
+            card.style.flex = `0 0 25%`;
+        }
     });
 
     function updateSliderPosition() {
-        servSlider.style.transform = `translateX(-${currentIndex * 30}%)`;
+        if(windowWidth > 768) {
+            servSlider.style.transform = `translateX(-${currentIndex * 33.33}%)`;
+        } else {
+            servSlider.style.transform = `translateX(-${currentIndex * 50}%)`;
+        }
     }
 
     nextButton.addEventListener("click", () => {
-        if (currentIndex < servSlides.length - cardsToShow) {
-            currentIndex++;
-            updateSliderPosition();
+        if(windowWidth > 768) {
+            if (currentIndex < servSlides.length - cardsToShow) {
+                currentIndex++;
+                updateSliderPosition();
+            }
+        } else {
+            if (currentIndex < servSlides.length - cardsToShowSmall) {
+                currentIndex++;
+                updateSliderPosition();
+            }
         }
     });
 
