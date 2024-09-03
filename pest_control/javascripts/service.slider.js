@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const servSlides = document.querySelectorAll(".serv-slide .card");
     const prevButton = document.querySelector(".serv-prev");
     const nextButton = document.querySelector(".serv-next");
-    const cardsToShow = 3; // Number of cards to display at a time
+    const cardsToShow = 3;
     const cardsToShowSmall = 2;
     let currentIndex = 0;
     const windowWidth = window.innerWidth;
@@ -12,21 +12,30 @@ document.addEventListener("DOMContentLoaded", function () {
     servSlides.forEach((card) => {
         if(windowWidth > 768) {
             card.style.flex = `0 0 29.5%`;
+        } else if(windowWidth <= 768 & windowWidth >= 590){
+            card.style.flex = `0 0 23.5%`;
         } else {
-            card.style.flex = `0 0 25%`;
+            card.style.flex = `0 0 23.5%`;
         }
     });
 
     function updateSliderPosition() {
         if(windowWidth > 768) {
             servSlider.style.transform = `translateX(-${currentIndex * 33.33}%)`;
+        } else if(windowWidth <= 768 & windowWidth >= 590){
+            servSlider.style.transform = `translateX(-${currentIndex * 34}%)`;
         } else {
-            servSlider.style.transform = `translateX(-${currentIndex * 50}%)`;
+            servSlider.style.transform = `translateX(-${currentIndex * 49}%)`;
         }
     }
 
     nextButton.addEventListener("click", () => {
         if(windowWidth > 768) {
+            if (currentIndex < servSlides.length - cardsToShow) {
+                currentIndex++;
+                updateSliderPosition();
+            }
+        } else if(windowWidth <= 768 & windowWidth >= 590){
             if (currentIndex < servSlides.length - cardsToShow) {
                 currentIndex++;
                 updateSliderPosition();

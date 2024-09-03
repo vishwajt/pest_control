@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const wordLimit = 15;
+    const wordLimit = 12;
     const serviceCards = document.querySelectorAll(".card");
 
     serviceCards.forEach(card => {
