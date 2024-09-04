@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const wordLimit = 20;
+    let wordLimit;
+    const windowWidth = window.innerWidth;
+    if(windowWidth > 768) {
+        wordLimit = 20;
+    } else if(windowWidth <= 768 & windowWidth >= 590) {
+        wordLimit = 15;
+    } else {
+        wordLimit = 12;
+    }
     const serviceCards = document.querySelectorAll(".service-card");
 
     serviceCards.forEach(card => {
