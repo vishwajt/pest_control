@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
     let wordLimit;
     const windowWidth = window.innerWidth;
     if(windowWidth > 768) {
-        wordLimit = 20;
+        wordLimit = 23;
     } else if(windowWidth <= 768 & windowWidth >= 590) {
-        wordLimit = 15;
+        wordLimit = 18;
     } else {
-        wordLimit = 12;
+        wordLimit = 10;
     }
     const serviceCards = document.querySelectorAll(".card");
 

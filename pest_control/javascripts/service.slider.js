@@ -11,21 +11,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // Set the width of each card based on the number of cards to show
     servSlides.forEach((card) => {
         if(windowWidth > 768) {
-            card.style.flex = `0 0 29.5%`;
+            card.style.flex = `0 0 13.4%`;
         } else if(windowWidth <= 768 & windowWidth >= 590){
-            card.style.flex = `0 0 23.5%`;
+            card.style.flex = `0 0 11.6%`;
         } else {
-            card.style.flex = `0 0 23.5%`;
+            card.style.flex = `0 0 9.1%`;
         }
     });
 
     function updateSliderPosition() {
         if(windowWidth > 768) {
-            servSlider.style.transform = `translateX(-${currentIndex * 33.33}%)`;
+            servSlider.style.transform = `translateX(-${currentIndex * 33.7}%)`;
         } else if(windowWidth <= 768 & windowWidth >= 590){
             servSlider.style.transform = `translateX(-${currentIndex * 34}%)`;
         } else {
-            servSlider.style.transform = `translateX(-${currentIndex * 49}%)`;
+            servSlider.style.transform = `translateX(-${currentIndex * 51}%)`;
         }
     }
 
