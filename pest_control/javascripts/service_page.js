@@ -80,6 +80,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function toggleMenu() {
-    const menu = document.querySelector(".menu ul");
+    var menu = document.querySelector('.menu ul');
     menu.classList.toggle('active');
 }
